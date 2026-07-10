@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RINL Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+        }
+
+        .navbar{
+            background-color: #003366;
+            color: white;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .container{
+            padding: 20px;
+        }
+
+        .card{
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px gray;
+        }
+
+        .chart-box{
+            background-color: white;
+            padding: 20px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 5px gray;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="navbar">
+
+        <div class="banner">
+            <h2>Customer Region-Wise Demand & Sales Analytics</h2>
+            <p>RINL - Visakhapatnam Steel Plant</p>
+        </div>
+
+        <div class="menu">
+            <a href="/">Dashboard</a>
+            <a href="/sales">Sales Entry</a>
+            <a href="/heatmap">Heatmap</a>
+            <a href="/reports">Reports</a>
+            <a href="/view_sales">View Sales</a>
+        </div>
+
+        <h1>RINL Region-wise Advanced Analytics System</h1>
+
+    </div>
+
+    <div class="container">
+
+        <div class="welcome">
+            <h2>Welcome to RINL Sales Analytics Dashboard</h2>
+            <p>Monitor customer demand, revenue, and regional sales performance.</p>
+        </div>
+
+        <div class="card">
+            <h2>Total Orders</h2>
+            <p>{{ total_orders }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Total Sales</h2>
+            <p>₹ {{ total_sales }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Highest Demand Region</h2>
+            <p>{{ top_region[0] }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Top State</h2>
+            <p>{{ top_state[0] }}</p>
+        </div>
+
+        <div class="card">
+            <h2>Top Product</h2>
+            <p>{{ top_product[0] }}</p>
+        </div>
+
+        <div class="chart-section">
+
+            <div class="chart-box">
+                <h3>Region-wise Sales Chart</h3>
+                <canvas id="regionChart"></canvas>
+            </div>
+
+            <div class="chart-box">
+                <h3>State-wise Sales Chart</h3>
+                <canvas id="stateChart"></canvas>
+            </div>
+
+        </div>
+
+    </div>
+
+    <script>
+    const regionChart = new Chart(
+        document.getElementById('regionChart'),
+        {
+            type: 'bar',
+            data: {
+                labels: {{ regions|tojson }},
+                datasets: [{
+                    label: 'Sales',
+                    data: {{ sales_values|tojson }},
+                    backgroundColor: [
+                        'blue',
+                        'green',
+                        'orange',
+                        'red'
+                    ]
+                }]
+            }
+        }
+    );
+
+    const stateChart = new Chart(
+        document.getElementById('stateChart'),
+        {
+            type: 'pie',
+            data: {
+                labels: {{ states|tojson }},
+                datasets: [{
+                    data: {{ state_sales|tojson }},
+                    backgroundColor: [
+                        'blue',
+                        'green',
+                        'orange',
+                        'red'
+                    ]
+                }]
+            }
+        }
+    );
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>State Wise Sales</title>
+</head>
+<body>
+
+<h1>State Wise Sales</h1>
+
+<table border="1">
+    <tr>
+        <th>State</th>
+        <th>Sales</th>
+    </tr>
+
+    {% for row in state_sales %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+    </tr>
+    {% endfor %}
+
+</table>
+
+</body>
+</html>

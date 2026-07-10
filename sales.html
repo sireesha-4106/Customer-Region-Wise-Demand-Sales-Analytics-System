@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Entry</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1>Sales Entry</h1>
+    </div>
+
+    <div class="card">
+
+        <h2>Add Sales Record</h2>
+        {% if message %}
+<p style="color:green;">{{ message }}</p>
+{% endif %}
+        <form>
+
+            <label>Customer Name</label><br>
+            <input type="text"><br><br>
+
+            <label>State</label><br>
+            <input type="text"><br><br>
+
+            <label>Product</label><br>
+            <input type="text"><br><br>
+
+            <label>Quantity</label><br>
+            <input type="number"><br><br>
+
+            <label>Revenue</label><br>
+            <input type="number"><br><br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+
+    </div>
+
+</body>
+</html>

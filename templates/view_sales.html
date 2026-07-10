@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Sales Records</title>
+
+    <style>
+        body{
+            font-family: Arial;
+            padding: 20px;
+        }
+
+        table{
+            width:100%;
+            border-collapse: collapse;
+        }
+
+        th,td{
+            border:1px solid black;
+            padding:10px;
+            text-align:center;
+        }
+
+        th{
+            background:#003366;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+
+<h1>All Sales Records</h1>
+
+<br>
+<form method="GET">
+    <input type="text" name="search"
+           placeholder="Search Customer, State or Product">
+
+    <button type="submit">Search</button>
+</form>
+
+<br>
+<table>
+
+<tr>
+    <th>Order ID</th>
+    <th>Customer Name</th>
+    <th>State</th>
+    <th>Region</th>
+    <th>Product Name</th>
+    <th>Sales</th>
+    <th>Action</th>
+</tr>
+
+{% for row in sales_data %}
+<tr>
+    <td>{{ row[0] }}</td>
+    <td>{{ row[1] }}</td>
+    <td>{{ row[2] }}</td>
+    <td>{{ row[3] }}</td>
+    <td>{{ row[4] }}</td>
+    <td>{{ row[5] }}</td>
+    <td>
+    <a href="/edit/{{ row[0] }}">Edit</a>
+</td>
+</tr>
+{% endfor %}
+
+</table>
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sales Entry</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1>Sales Entry</h1>
+    </div>
+
+    <div class="card">
+
+        <h2>Add Sales Record</h2>
+        {% if message %}
+    <p style="color:green;">{{ message }}</p>
+{% endif %}
+
+       <form method="POST">
+
+    <input type="text" name="order_id" placeholder="Order ID" required><br><br>
+
+    <input type="date" name="order_date" required><br><br>
+
+    <input type="text" name="customer_name" placeholder="Customer Name" required><br><br>
+
+    <input type="text" name="state" placeholder="State" required><br><br>
+
+    <input type="text" name="region" placeholder="Region" required><br><br>
+
+    <input type="text" name="product_name" placeholder="Product Name" required><br><br>
+
+    <input type="number" step="0.01" name="sales" placeholder="Sales Amount" required><br><br>
+
+    <input type="number" name="quantity" placeholder="Quantity" required><br><br>
+
+    <input type="number" step="0.01" name="profit" placeholder="Profit" required><br><br>
+
+    <button type="submit">Add Sales Record</button>
+
+</form>
+    </div>
+
+</body>
+</html>
