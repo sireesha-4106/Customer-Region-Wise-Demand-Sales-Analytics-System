@@ -9,7 +9,7 @@ def dashboard():
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Siri4106@",
+        password="****",
         database="superstore_db"
     )
 
@@ -116,7 +116,7 @@ def sales():
         conn = mysql.connector.connect(
             host="localhost",
             user="root",
-            password="Siri4106@",
+            password="****",
             database="superstore_db"
         )
 
@@ -158,7 +158,7 @@ def reports():
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Siri4106@",
+        password="****",
         database="superstore_db"
     )
 
@@ -185,7 +185,7 @@ def heatmap():
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Siri4106@",
+        password="****",
         database="superstore_db"
     )
 
@@ -213,7 +213,7 @@ def view_sales():
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Siri4106@",
+        password="****",
         database="superstore_db"
     )
 
@@ -256,7 +256,7 @@ def edit_record(order_id):
     conn = mysql.connector.connect(
         host="localhost",
         user="root",
-        password="Siri4106@",
+        password="****",
         database="superstore_db"
     )
 
