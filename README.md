@@ -78,6 +78,23 @@ MVGR College of Engineering
 
 ---
 
+
+## 📷 Screenshots
+
+### Dashboard
+![Dashboard](screenshots/dashboard.png)
+
+### Sales Entry
+![Sales Entry](screenshots/sales-entry.png)
+
+### Reports
+![Reports](screenshots/reports.png)
+
+### Heatmap
+![Heatmap](screenshots/heatmap.png)
+
+### Region-wise Sales
+![Region-wise Sales](screenshots/region-sales.png)
 ## ⭐ Acknowledgement
 
 This project was developed as part of my internship at **RINL – Visakhapatnam Steel Plant (IT & ERP Department)**.
