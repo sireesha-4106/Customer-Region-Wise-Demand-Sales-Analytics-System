@@ -52,8 +52,11 @@ The system helps analyze customer demand and sales performance across different 
 
 ## 📷 Screenshots
 
-### Dashboard
+### Dashboard1
 ![Dashboard](screenshots/dashboard.png)
+
+### Dashboard2
+![Dashboard](screenshots/dashboard2.png)
 
 ### Sales Entry
 ![Sales Entry](screenshots/sales-entry.png)
@@ -64,8 +67,11 @@ The system helps analyze customer demand and sales performance across different 
 ### Heatmap
 ![Heatmap](screenshots/heatmap.png)
 
-### Region-wise Sales
-![Region-wise Sales](screenshots/region-sales.png)
+### edit sales record
+![Edit sales](screenshots/editsalesrecord.png)
+
+### Region wise sales report
+![region wise](screenshots/regionwisesalesreport.png)
 
 ---
 
